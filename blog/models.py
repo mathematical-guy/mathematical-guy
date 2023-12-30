@@ -17,7 +17,7 @@ class Blog(models.Model):
 class BlogComponent(models.Model):
     blog: Blog = models.ForeignKey(Blog, on_delete=models.CASCADE, related_name="blog_component")
     type = models.CharField(max_length=12, choices=BlogComponentTypes.choices)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True, upload_to="blog_media")
     text = models.TextField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
