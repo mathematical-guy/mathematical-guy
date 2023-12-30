@@ -1,14 +1,18 @@
+from dotenv import load_dotenv
+import os
 from pathlib import Path
 
+load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ly#5r@nmddh9gn7ep789%m(ry*zx&_001fyuw#vz!(#u$yv#6&'
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = (os.getenv("DEBUG") == 'True')
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -89,13 +93,17 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = 'static/'
-STATIC_ROOT = '/static/'
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 # ----------------------------------------------- Media Configurations -----------------------------------------------
 # Generated URL
 MEDIA_URL = '/media/'
 # Folder directory
 MEDIA_ROOT = BASE_DIR / 'media'
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    MEDIA_ROOT,
+]
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

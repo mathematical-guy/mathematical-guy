@@ -11,5 +11,4 @@ urlpatterns = [
 
 media_urls = static(prefix=settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 static_urls = static(prefix=settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
 urlpatterns = urlpatterns + static_urls + media_urls
