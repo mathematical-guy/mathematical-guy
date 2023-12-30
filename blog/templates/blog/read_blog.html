@@ -1,9 +1,11 @@
 {% extends "blog/base.html" %}
+{% load static %}
 
 {% block content_block %}
+<h1>{{ blog_title }} </h1>
 {% for component in components %}
-      {% if component.type == 'IMAGE' %}
-        {{component.image.url}}
+      {% if component.type == 'IMAGE' %}      
+        <img src="{{component.image.url}}"> <br><br><br>
       {% endif %}
       <p>{{ component.text}} </p>
     {% endfor %}
