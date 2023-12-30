@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mathematical-Guy</title>
+  </head>
+  <body>
+    {% for component in components %}
+      {% if component.type == 'IMAGE' %}
+        {{component.image.url}}
+      {% endif %}
+      <p>{{ component.text}} </p>
+    {% endfor %}
+  </body>
+</html>
