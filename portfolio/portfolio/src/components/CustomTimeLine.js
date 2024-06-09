@@ -1,7 +1,5 @@
 import * as React from 'react';
 import Timeline from '@mui/lab/Timeline';
-import FastfoodIcon from '@mui/icons-material/Fastfood';
-import WorkIcon from '@mui/icons-material/Work';
 
 
 // Custom Component imports
