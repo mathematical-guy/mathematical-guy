@@ -1,0 +1,15 @@
+:root {
+  --background-color: #f0f0f0,
+  --main-font: 'Cambria',
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--background-color);
+  color: green;
+}
+
+.mypic {
+  width: 90%;
+  border-radius: 13%;
+}
