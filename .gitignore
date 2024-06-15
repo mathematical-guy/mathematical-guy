@@ -168,3 +168,6 @@ dist-ssr
 *.sln
 *.sw?
 **/assets/mypic.jpeg
+
+# ------------------- Others ----------------------
+secret_keys
