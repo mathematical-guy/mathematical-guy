@@ -1,15 +1,25 @@
 :root {
-  --background-color: #f0f0f0,
-  --main-font: 'Cambria',
+  --background-color: #927dee;
+  --foreground-color: #ece6e6;
+  --main-heading-color: #fff;
+  --sub-heading-color: #8e8e8e;
 }
 
 body {
-  font-family: var(--main-font);
+  /* background-color: var(--backgroundcolor); */
   background-color: var(--background-color);
-  color: green;
+  color: var(--foreground-color);
 }
 
 .mypic {
   width: 90%;
   border-radius: 13%;
+}
+
+h1 {
+  color: var(--main-heading-color);
+}
+
+h2{
+  color: var(--sub-heading-color);
 }
