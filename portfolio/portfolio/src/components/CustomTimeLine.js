@@ -10,7 +10,7 @@ export default function CustomizedTimeline({data, heading, Icon}) {
   
   return (
     <Timeline position="alternate">
-      <h1>{heading}</h1>
+      <h2>{heading}</h2>
       {data.map((element, index) => {
         return (<CustomTimeLineSection
           position={index % 2 === 0 ? "left" : "right"}

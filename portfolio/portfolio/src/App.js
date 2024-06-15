@@ -15,13 +15,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Intro />
-        <hr/>
-        <ContactMe />
       </header>
 
       <CustomTimeLine data={experiences} heading="Experience" Icon={WorkIcon}/>
       <CustomTimeLine data={educations} heading="Education" Icon={SchoolIcon}/>
 
+      <hr/>
+        <ContactMe />
     </div>
   );
 }
