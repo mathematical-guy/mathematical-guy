@@ -17,7 +17,7 @@ function App() {
         <Intro />
       </header>
 
-      <CustomTimeLine data={experiences} heading="Experience" Icon={WorkIcon}/>
+      <CustomTimeLine data={experiences} heading="Experience" Icon={WorkIcon} displayExtraInfo />
       <CustomTimeLine data={educations} heading="Education" Icon={SchoolIcon}/>
 
       <hr/>

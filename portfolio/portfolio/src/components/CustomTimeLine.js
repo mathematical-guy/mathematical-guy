@@ -7,7 +7,7 @@ import CustomTimeLineSection from './CustomTimeLineSection';
 
 export default function CustomizedTimeline({data, heading, Icon}) {
   // const [experiences, setExperiences] = useState([]);
-  
+
   return (
     <Timeline position="alternate">
       <h2>{heading}</h2>
@@ -15,11 +15,13 @@ export default function CustomizedTimeline({data, heading, Icon}) {
         return (<CustomTimeLineSection
           position={index % 2 === 0 ? "left" : "right"}
           heading={element.heading}
+          key={index}
           description={element.description}
           role={element.role}
           duration={element.duration}
           showBelowSeparator={(index in [0, data.length]) ? true : false}
           Icon={Icon}
+          extraInfo={element.extraInfo}
         />)
       })}
 
