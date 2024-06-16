@@ -5,9 +5,7 @@ import Grid from '@mui/material/Grid';
 export default function Intro({myPicURL}) {
   return (
     <>
-    <h1>Hello from {myPicURL}</h1>
-    <h1>Hello World, I am Mohit Talreja</h1>
-        <h1>I am a Backend Developer</h1>
+    <h1>Hello World, I am Mohit Talreja, a Backend Developer (Django)</h1>
         <Grid container spacing={8} rowGap={19}>
           <Grid item xs={8}>
             <h3>Experienced Software Developer with 3 years of experience in developing dynamic web applications. Proficient in backend technologies
