@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Intro />
+        <Intro myPicURL={process.env.REACT_APP_MY_PIC_S3_URL} />
       </header>
 
       <CustomTimeLine data={experiences} heading="Experience" Icon={WorkIcon} displayExtraInfo />
