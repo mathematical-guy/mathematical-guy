@@ -3,6 +3,12 @@ from django.views import generic
 from blog.models import BlogComponent, Blog
 
 
+class BlogListView(generic.ListView):
+    model = Blog
+    context_object_name = 'blogs'
+    template_name = "blog/blog_list.html"
+
+
 class BlogComponentListView(generic.ListView):
     model = BlogComponent
     context_object_name = "components"
@@ -16,4 +22,5 @@ class BlogComponentListView(generic.ListView):
         context: dict = super(BlogComponentListView, self).get_context_data(**kwargs)
         blog = Blog.objects.filter(id=self.kwargs.get('blog_id')).first()
         context["blog_title"] = blog.title if blog else "N/A"
+        context["blog_created_at"] = blog.created_at if blog else "N/A"
         return context
